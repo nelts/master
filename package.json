@@ -1,6 +1,6 @@
 {
   "name": "@nelts/master",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "master for nelts",
   "main": "dist/index.js",
   "source": "dist",
@@ -26,10 +26,11 @@
     "typescript": "^3.5.3"
   },
   "dependencies": {
+    "@nelts/agent": "^1.0.3",
     "@nelts/factory": "^1.0.0",
-    "@nelts/messager": "^1.0.3",
+    "@nelts/messager": "^1.0.7",
     "@nelts/process": "^1.1.11",
-    "@nelts/utils": "^1.0.4",
+    "@nelts/utils": "^1.0.5",
     "@nelts/worker": "^1.0.1",
     "globby": "^10.0.1",
     "reflect-metadata": "^0.1.13"

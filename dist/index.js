@@ -46,6 +46,13 @@ class MasterFactory extends factory_1.Factory {
             const worker = await this._forker();
             this.logger.info(`worker [pid:${worker.pid}] forked.`);
         }
+        const promises = [];
+        const workers = this.processer.workers;
+        const agents = this.processer.agents;
+        const keys = Object.keys(agents);
+        promises.push(...keys.map(key => this.messager.asyncSend('event:get:ready', null, { to: key })));
+        promises.push(...workers.map(worker => this.messager.asyncSend('event:get:ready', null, { to: worker.pid })));
+        await Promise.all(promises);
     }
     componentReceiveMessage(message, socket) {
         this.messager.receiveMessage(message, socket);

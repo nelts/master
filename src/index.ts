@@ -55,6 +55,14 @@ export default class MasterFactory extends Factory<MasterPlugin> implements Widg
       const worker = await this._forker();
       this.logger.info(`worker [pid:${worker.pid}] forked.`);
     }
+    // notify to workers and agents.
+    const promises: Promise<any>[] = [];
+    const workers = this.processer.workers;
+    const agents = this.processer.agents;
+    const keys = Object.keys(agents);
+    promises.push(...keys.map(key => this.messager.asyncSend('event:get:ready', null, { to: key })));
+    promises.push(...workers.map(worker => this.messager.asyncSend('event:get:ready', null, { to: worker.pid })));
+    await Promise.all(promises);
   }
 
   componentReceiveMessage(message: MessageReceiveDataOptions, socket?: any) {
