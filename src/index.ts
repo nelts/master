@@ -63,6 +63,7 @@ export default class MasterFactory extends Factory<MasterPlugin> implements Widg
     promises.push(...keys.map(key => this.messager.asyncSend('event:get:ready', null, { to: key })));
     promises.push(...workers.map(worker => this.messager.asyncSend('event:get:ready', null, { to: worker.pid })));
     await Promise.all(promises);
+    this.logger.info('Congratulations, all services are started.');
   }
 
   componentReceiveMessage(message: MessageReceiveDataOptions, socket?: any) {
