@@ -33,7 +33,7 @@ class MasterFactory extends factory_1.Factory {
         this.compiler.addCompiler(bootstrap_1.default);
         this._forker = this.createWorkerForker(this._EXPORT_MODULE_FILE_WORKER, {
             base: this.base,
-            config: this.configs,
+            config: this.inCommingMessage.config,
             port: this._port,
             socket: this._socket,
             sticky: this._sticky,

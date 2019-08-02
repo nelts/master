@@ -41,7 +41,7 @@ export default class MasterFactory extends Factory<MasterPlugin> implements Widg
     this.compiler.addCompiler(BootstrapCompiler);
     this._forker = this.createWorkerForker(this._EXPORT_MODULE_FILE_WORKER, { 
       base: this.base, 
-      config: this.configs, 
+      config: this.inCommingMessage.config, 
       port: this._port, 
       socket: this._socket,
       sticky: this._sticky, 
