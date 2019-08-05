@@ -31,7 +31,7 @@
     "@nelts/messager": "^1.0.15",
     "@nelts/process": "^1.1.20",
     "@nelts/utils": "^1.0.18",
-    "@nelts/worker": "^1.0.16",
+    "@nelts/worker": "^1.0.17",
     "globby": "^10.0.1",
     "reflect-metadata": "^0.1.13"
   }
