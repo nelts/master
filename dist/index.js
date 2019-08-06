@@ -43,9 +43,9 @@ class MasterFactory extends factory_1.Factory {
     async componentDidCreated() {
         await super.componentDidCreated();
         for (let i = 0; i < this._max; i++) {
-            this.logger.info('forking worker...');
+            this.logger.info('<Forking>', '[Worker]', '...');
             const worker = await this._forker();
-            this.logger.info(`worker [pid:${worker.pid}] forked.`);
+            this.logger.info('<Forked>', '[Worker]', worker.pid);
         }
         const promises = [];
         const workers = this.processer.workers;

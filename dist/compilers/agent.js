@@ -18,6 +18,7 @@ async function AgentAutoRun(plu) {
         if (Reflect.getMetadata(agent_1.Namespace.AUTO, callback)) {
             if (!callback.name)
                 throw new Error('agent must defined with a name.');
+            plu.logger.info('<Forking>', '[Agent]', callback.name, '...');
             await plu.app.createAgent(callback.name, plu.app.agentModuleFile, {
                 file,
                 base: plu.app.base,
@@ -25,6 +26,7 @@ async function AgentAutoRun(plu) {
                 name: callback.name,
                 mpid: plu.app.inCommingMessage.mpid
             });
+            plu.logger.info('<Forked>', '[Agent]', callback.name);
         }
     }
 }
