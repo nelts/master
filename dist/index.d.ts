@@ -17,6 +17,9 @@ export default class MasterFactory extends Factory<MasterPlugin> implements Widg
     readonly agentModuleFile: string;
     componentWillCreate(): Promise<void>;
     componentDidCreated(): Promise<void>;
+    componentWillDestroy(): Promise<void>;
+    componentDidDestroyed(): Promise<void>;
+    componentCatchError(err: Error): Promise<void>;
     componentReceiveMessage(message: MessageReceiveDataOptions, socket?: any): void;
     private createSocketInterceptor;
 }
