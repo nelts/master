@@ -6,6 +6,7 @@ const factory_1 = require("@nelts/factory");
 const messager_1 = require("@nelts/messager");
 const utils_1 = require("@nelts/utils");
 const plugin_1 = require("./plugin");
+exports.MasterPlugin = plugin_1.default;
 const agent_1 = require("./compilers/agent");
 const bootstrap_1 = require("./compilers/bootstrap");
 class MasterFactory extends factory_1.Factory {

@@ -2,6 +2,7 @@ import { WidgetComponent, Processer } from '@nelts/process';
 import { Factory, InCommingMessage } from '@nelts/factory';
 import { Master as MasterMessager, MessageReceiveDataOptions } from '@nelts/messager';
 import MasterPlugin from './plugin';
+export { MasterPlugin };
 export default class MasterFactory extends Factory<MasterPlugin> implements WidgetComponent {
     private _max;
     private _port;

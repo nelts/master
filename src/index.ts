@@ -8,6 +8,10 @@ import MasterPlugin from './plugin';
 import AgentAutoCompiler from './compilers/agent';
 import BootstrapCompiler from './compilers/bootstrap';
 
+export {
+  MasterPlugin
+}
+
 export default class MasterFactory extends Factory<MasterPlugin> implements WidgetComponent {
   private _max: number;
   private _port: number;
