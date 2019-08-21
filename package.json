@@ -1,6 +1,6 @@
 {
   "name": "@nelts/master",
-  "version": "1.0.38",
+  "version": "1.0.39",
   "description": "master for nelts",
   "main": "dist/index.js",
   "source": "dist",
