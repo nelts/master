@@ -54,14 +54,14 @@ class MasterFactory extends factory_1.Factory {
         promises.push(...keys.map(key => this.messager.asyncSend('event:get:ready', null, { to: key })));
         promises.push(...workers.map(worker => this.messager.asyncSend('event:get:ready', null, { to: worker.pid })));
         await Promise.all(promises);
-        await this.emit('ServerStarted');
+        await this.sync('ServerStarted');
         this.logger.info('Congratulations, all services are started.');
     }
     async componentWillDestroy() {
-        await this.emit('ServerStopping');
+        await this.sync('ServerStopping');
     }
     async componentDidDestroyed() {
-        await this.emit('ServerStopped');
+        await this.sync('ServerStopped');
     }
     async componentCatchError(err) {
         this.logger.error(err);
