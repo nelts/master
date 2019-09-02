@@ -26,12 +26,12 @@
     "typescript": "^3.6.2"
   },
   "dependencies": {
-    "@nelts/agent": "^1.0.30",
-    "@nelts/factory": "^1.0.21",
-    "@nelts/messager": "^1.0.24",
+    "@nelts/agent": "^1.0.31",
+    "@nelts/factory": "^1.0.22",
+    "@nelts/messager": "^1.0.25",
     "@nelts/process": "^1.1.23",
     "@nelts/utils": "^1.0.20",
-    "@nelts/worker": "^1.0.41",
+    "@nelts/worker": "^1.0.42",
     "globby": "^10.0.1",
     "reflect-metadata": "^0.1.13"
   }
