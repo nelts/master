@@ -22,16 +22,16 @@
   },
   "homepage": "https://github.com/nelts/master#readme",
   "devDependencies": {
-    "@types/node": "^12.7.3",
+    "@types/node": "^12.7.4",
     "typescript": "^3.6.2"
   },
   "dependencies": {
-    "@nelts/agent": "^1.0.32",
-    "@nelts/factory": "^1.0.23",
-    "@nelts/messager": "^1.0.26",
+    "@nelts/agent": "^1.0.33",
+    "@nelts/factory": "^1.0.24",
+    "@nelts/messager": "^1.0.27",
     "@nelts/process": "^1.1.26",
     "@nelts/utils": "^1.0.20",
-    "@nelts/worker": "^1.0.43",
+    "@nelts/worker": "^1.0.44",
     "globby": "^10.0.1",
     "reflect-metadata": "^0.1.13"
   }
